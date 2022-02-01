@@ -5,7 +5,7 @@ class PokedexController < ApplicationController
 
   # GET /pokedex
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.ransack(name_cont: params[:q]).result.paginate(page: params[:page], per_page: 25)
 
     render json: PokemonSerializer.new(@pokemons)
   end

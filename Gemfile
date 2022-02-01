@@ -16,6 +16,7 @@ gem 'jsonapi-serializer', '~> 2.2'
 
 # Search & pagination
 gem 'ransack', '~> 2.5'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 # Command-line progress-bar
 gem 'progress_bar', '~> 1.3', '>= 1.3.3'
